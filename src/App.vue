@@ -7,17 +7,22 @@
 
 <template>
 	<div class="changeRoute">
-		<router-link to="/">
-			<button>toHome</button>
-		</router-link>
-		<router-link to="/about">
-			<button>toAbout</button>
+		<router-link v-for="router in routerList" :key="router.name" :to="router.path">
+			<button>{{ router.name }}</button>
 		</router-link>
 	</div>
 	<router-view />
 </template>
 
 <script setup lang="ts">
+import { useRouter } from 'vue-router';
+
+// router 实例
+const router = useRouter();
+
+// 路由列表
+const routerList = router.options.routes;
+
 </script>
 
 <style scoped>
