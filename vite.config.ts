@@ -1,23 +1,23 @@
-import { defineConfig } from "vite"; // 帮手函数，不用 jsdoc 注解也可以获取类型提示
+import { defineConfig } from "vite"; //帮手函数，不用 jsdoc 注解也可以获取类型提示
 import vue from "@vitejs/plugin-vue";
-// vite版本3.0.0以上 ，已禁用，使用ES6的import引入
-// const { resolve } = require("path");
+//vite版本3.0.0以上 ，已禁用，使用ES6的import引入
+//const { resolve } = require("path");
 import { resolve } from "path";
 
-// https://vitejs.dev/config/
+//https://vitejs.dev/config/
 export default defineConfig({
   //配置需要使用的插件列表
   plugins: [vue()],
 
-  // 静态资源目录
+  //静态资源目录
   publicDir: "public",
   base: "./",
 
-  // 设为false 可以避免 vite 清屏而错过在终端中打印某些关键信息
+  //设为false 可以避免 vite 清屏而错过在终端中打印某些关键信息
   clearScreen: false,
 
   resolve: {
-    // 设置文件路径别名
+    //设置文件路径别名
     alias: {
       "@": resolve(__dirname, "src"),
     },
