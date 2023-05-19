@@ -1,7 +1,7 @@
 /*
  * @Date: 2023-05-10 15:28:40
  * @LastEditors: sxw s9x9w9@163.com
- * @LastEditTime: 2023-05-12 14:30:56
+ * @LastEditTime: 2023-05-15 10:43:20
  * @FilePath: \vue-advance-vite\src\utils\interesting.ts
  */
 
@@ -78,6 +78,8 @@ type T0 = Exclude<'a' | 'b' | 'c', 'a'>; // "b" | "c"
 type T1 = Extract<'a' | 'b' | 'c', 'a' | 'f'>; // "a"
 type T2 = NonNullable<string | number | undefined>; // string | number
 type T3 = ReturnType<() => string>; // string
+
+// generics-hover
 
 
 
